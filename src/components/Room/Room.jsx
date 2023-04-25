@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { FaBed, FaDollarSign, FaFemale } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Room = ({ room }) => {
     const { title, description, imgUrl,bed,capacity,bedType,price } = room;
@@ -26,7 +27,7 @@ const Room = ({ room }) => {
                         <FaDollarSign></FaDollarSign>{price}
                     </div>
 
-                    <Button className='btn-primary'>Book</Button>
+                    <Link to='/book'><Button className='btn-primary'>Book</Button></Link>
                 </Card.Footer>
             </Card>
         </Col>
