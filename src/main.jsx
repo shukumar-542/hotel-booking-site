@@ -10,6 +10,8 @@ import Login from './components/Login/Login'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Register from './components/Register/Register'
 import AuthProvider from './Provider/AuthProvider'
+import Book from './components/Book/Book'
+import PrivateRoute from './components/Routes/PrivateRoute'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path : '/book',
+        element : <PrivateRoute><Book></Book></PrivateRoute>
       },
       {
         path: '/register',
